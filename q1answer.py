@@ -14,3 +14,13 @@
 # If an available time slot is found, schedule the job in that time slot, update the count of jobs done and the total profit earned.
 
 # Return the count of jobs done and the total profit earned.
+
+def max_profit(jobs):
+  # Sort the jobs in decreasing order of their profits
+  jobs = sorted(jobs, key=lambda x: x[2], reverse=True)
+  # Initialize the scheduling table
+  print(jobs)
+  n = len(jobs)
+  max_deadline = max(jobs, key=lambda x: x[1])[1]
+  print(max_deadline)
+  table = [0] * (max_deadline+1)
