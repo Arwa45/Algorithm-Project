@@ -24,11 +24,10 @@ def max_profit(jobs):
   print(jobs)
   n = len(jobs)
   max_deadline = max(jobs, key=lambda x: x[1])[1]
-  print(max_deadline)
   #time slot is list  contains from 5 zeros
   table = [0] * (max_deadline+1)
   # Schedule the jobs
-  count = 0
+  no_of_jobs = 0
   profit = 0
   for i in range(n):
     # Find the latest available time slot for this job
