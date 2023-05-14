@@ -33,6 +33,19 @@ def max_profit(jobs):
   for i in range(n):
     # Find the latest available time slot for this job
     for j in range(jobs[i][1], 0, -1):
+      
+      if table[j] == 0: 
+        table[j] = jobs[i][0]
+        no_of_jobs += 1
+        profit += jobs[i][2]
+        break
+      #Return the count of the jobs done and total earned
+  return no_of_jobs, profit
+
+jobs = [(1,4,20),(2,1,10),(3,1,40),(4,1,30)]
+no_of_jobs, profit = max_profit(jobs)
+print("Number of jobs done:", no_of_jobs)
+print("Maximum profit:", profit)
  
-      table[j] = jobs[i][0]
+      
 
