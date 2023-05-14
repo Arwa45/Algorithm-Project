@@ -21,7 +21,6 @@ def max_profit(jobs):
   #and it will acsses x[2] of the tabel which is job profit 
   jobs = sorted(jobs, key=lambda x: x[2], reverse=True)
   # Initialize the scheduling table
-  print(jobs)
   n = len(jobs)
   max_deadline = max(jobs, key=lambda x: x[1])[1]
   #time slot is list  contains from 5 zeros
