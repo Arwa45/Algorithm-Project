@@ -1,0 +1,20 @@
+def max_profit(jobs):
+  # Holds our maximum profit from jobs
+  holder= list()
+  # Sort out jobs list ascending accroding to the deadline
+  jobs.sort(key=lambda x:x[1])
+
+  for job in jobs:
+    # if there is a free place for our job add it
+    if job[1] > len(holder):
+      holder.append(job[2])
+    
+    # if there is not a free space to our job 
+    else:
+      
+      # if there is a job in our holder that gives us less profit than this job i.e(the job we are standing on on the loop) ...
+      if job[2] > min(holder):
+        # replace that profit with our profit
+        
+        holder[holder.index(min(holder))] = job[2] 
+    
