@@ -17,4 +17,13 @@ def max_profit(jobs):
         # replace that profit with our profit
         
         holder[holder.index(min(holder))] = job[2] 
+        # print the maximum profit that can be made and the number of jobs done
+
+  print("maximum profite is " + str(sum(holder)))
+
+  print("number of jobs done is " +str(len(holder)))
+
+jobs = [(1,4,20),(2,1,10),(3,1,40),(4,1,30)]
+
+max_profit(jobs)
     
